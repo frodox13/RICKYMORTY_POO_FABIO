@@ -1,3 +1,5 @@
+# RICKYMORTY_POO_FABIO
+
 ## Evaluacion 2 de POO
 
 Desarrollar una aplicación en Python que permita gestionar usuarios y personajes del universo de Rick and Morty, aplicando:
@@ -20,7 +22,7 @@ Desarrollar una aplicación en Python que permita gestionar usuarios y personaje
 └── README.md                       # Documentación del proyecto
 ```
 
-# Instalacion y uso
+## Instalacion y uso
 1. Clonar repositorio:
     ```bash
     git clone https://github.com/frodox13/RICKYMORTY_POO_FABIO.git
