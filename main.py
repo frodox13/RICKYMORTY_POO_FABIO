@@ -13,6 +13,8 @@ def menu():
         print("5. Listar personajes de un usuario")
         print("6. Actualizar personaje")
         print("7. Eliminar personaje")
+        print("8. Buscar episodio por ID (API)")
+        print("9. Buscar ubicación por ID (API)")
         print("0. Salir")
         opcion = input("Elige una opción: ")
 
@@ -107,6 +109,30 @@ def menu():
                     continue
                 ctrl.eliminar_personaje(pid)
                 print("Personaje eliminado.")
+
+            elif opcion == "8":
+                try:
+                    eid = int(input("ID de episodio (API): "))
+                except ValueError:
+                    print("ID inválido.")
+                    continue
+                episodio = ctrl.obtener_episodio_api(eid)
+                if episodio:
+                    print(f"Episodio: {episodio['name']} | Fecha: {episodio['air_date']} | Código: {episodio['episode']}")
+                else:
+                    print("No se encontró el episodio en la API.")
+
+            elif opcion == "9":
+                try:
+                    lid = int(input("ID de ubicación (API): "))
+                except ValueError:
+                    print("ID inválido.")
+                    continue
+                ubicacion = ctrl.obtener_ubicacion_api(lid)
+                if ubicacion:
+                    print(f"Ubicación: {ubicacion['name']} | Tipo: {ubicacion['type']} | Dimensión: {ubicacion['dimension']}")
+                else:
+                    print("No se encontró la ubicación en la API.")
 
             elif opcion == "0":
                 print("Ha salido del programa.")

@@ -66,6 +66,12 @@ class RickAndMortyApi:
     def obtener_personajes(self, personaje_id):
         return self.api_manager.obtener_personaje_api(personaje_id)
 
+    def obtener_episodio(self, episodio_id):
+        return self.api_manager.obtener_episodio_api(episodio_id)
+
+    def obtener_ubicacion(self, ubicacion_id):
+        return self.api_manager.obtener_ubicacion_api(ubicacion_id)
+
     def deserializar_json(self, json_data):
         return Personaje(
             id=json_data['id'],
